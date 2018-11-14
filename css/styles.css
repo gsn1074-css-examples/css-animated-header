@@ -1,0 +1,50 @@
+header {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden; }
+
+header > * {
+  position: absolute; }
+
+header > [data-title] {
+  font-size: 3em;
+  left: 15%;
+  z-index: 99999; }
+
+header > div:nth-of-type(1) {
+  top: 5%;
+  left: 10%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid #000;
+  background-color: rgba(0, 98, 255, 0.25); }
+
+header > div:nth-of-type(2) {
+  top: 20%;
+  left: 40%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid #000;
+  background-color: rgba(204, 0, 255, 0.25); }
+
+header [data-animation="in"] {
+  animation: openIn 1s forwards; }
+
+header [data-animation="up"] {
+  animation: openUp 1s forwards; }
+
+header [data-animation="down"] {
+  animation: openDown 1s forwards; }
+
+@keyframes openIn {
+  from {
+    font-size: 0; } }
+
+@keyframes openUp {
+  from {
+    top: 100%; } }
+
+@keyframes openDown {
+  from {
+    top: -100%; } }
